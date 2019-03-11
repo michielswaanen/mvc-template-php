@@ -1,0 +1,4 @@
+# Prevents access to the app folder
+
+Options -Indexes
+

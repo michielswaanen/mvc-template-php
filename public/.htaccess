@@ -1,0 +1,13 @@
+# Deletes the .php from the files
+Options -MultiViews
+RewriteEngine On
+
+# Rewrite the url (development)
+# TODO Change or delete the Rewrite base when development is over
+RewriteBase /public
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Rewrite parameters
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
