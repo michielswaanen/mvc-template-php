@@ -1,7 +1,8 @@
 <?php
-class Home extends Controller {
 
-    // Index of the home page (localhost/home(/index))
+class Contact extends Controller {
+
+    // Index of the contact page (localhost/contact(/index))
     public function index($param1= '', $param2= '', $param3= '') {
         
         // Initialize Test model
@@ -10,7 +11,7 @@ class Home extends Controller {
         // Call function from the model
         $testData = $test->getTestFunction();
 
-        $this->view('home/index', ['test' => testData, 'parameters' => [$param1, $param2, $param3]]);
+        $this->view('contact/index', ['test' => testData, 'parameters' => [$param1, $param2, $param3]]);
     }
 }
 
